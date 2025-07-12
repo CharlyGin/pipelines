@@ -1,0 +1,14 @@
+repos:
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    rev: 0.7.20
+    hooks:
+      - id: uv-lock
+      - id: uv-export
+        args: ["--frozen"]
+      - id: pip-compile
+        args: [requirements.in, -o, requirements.txt]
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.12.3
+    hooks:
+      - id: ruff-check
+      - id: ruff-format

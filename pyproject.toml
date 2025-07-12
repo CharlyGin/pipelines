@@ -1,0 +1,9 @@
+[project]
+name = "pipelines"
+version = "0.1.0"
+description = "CI/CD pipelines"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pre-commit>=4.2.0",
+]
