@@ -1,0 +1,4 @@
+[submodule "app"]
+	path = basic_app
+	url = https://github.com/CharlyGin/basic_app
+	branch = main
