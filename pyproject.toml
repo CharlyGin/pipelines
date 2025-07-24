@@ -5,5 +5,7 @@ description = "CI/CD pipelines"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "docker>=7.1.0",
+    "dotenv>=0.9.9",
     "pre-commit>=4.2.0",
 ]
