@@ -13,7 +13,7 @@ class TestBuildAndPushDocker(unittest.TestCase):
         build_and_push(
             username=os.getenv("DOCKER_USERNAME"),
             token=os.getenv("DOCKER_PASSWORD"),
-            tags=f"carlitog/basic-app:{uuid4()}",
+            tags=f"carlitog/basic-app:{uuid4()},carlitog/basic-app:latest",
             platforms="linux/arm64",
             path="./basic_app",
         )

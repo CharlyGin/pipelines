@@ -49,7 +49,8 @@ def build_and_push(
 
     print("############################# BUILD IMAGE(S) #############################")
     status: int = os.system(
-        f"docker buildx build --tag {tags} \
+        f"docker buildx build \
+              {' '.join(f'--tag {tag}' for tag in tags.split(','))} \
               --push \
               --platform {platforms} \
               {f'--file {dockerfile_path}' if dockerfile_path else ''} \
