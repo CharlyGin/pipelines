@@ -48,6 +48,7 @@ def build_and_push(
         exit(-1)
 
     print("############################# BUILD IMAGE(S) #############################")
+    os.system("docker buildx create --name container --driver docker-container --use ")
     status: int = os.system(
         f"docker buildx build \
               {' '.join(f'--tag {tag}' for tag in tags.split(','))} \
