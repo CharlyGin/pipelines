@@ -74,6 +74,19 @@ if __name__ == "__main__":
     )
 
     parser.add_argument(
+        "-u",
+        "--username",
+        type=str,
+        help="docker username",
+        required=True,
+    )
+    parser.add_argument(
+        "--token",
+        type=str,
+        help="docker token",
+        required=True,
+    )
+    parser.add_argument(
         "-t",
         "--tags",
         type=str,
@@ -110,6 +123,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     build_and_push(
+        username=args.username,
+        token=args.token,
         tags=args.tags,
         path=args.path,
         platforms=args.platforms,
